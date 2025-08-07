@@ -78,7 +78,7 @@ These optimizations make the app suitable for deployment in real-world environme
 ![Home Dashboard](assests/screenshot1.png)
 
 ### Prediction Result
-![Prediction Result](assests/screenshot2.png)
+![Prediction Result](assests/Ss2.png)
 
 
 ---
