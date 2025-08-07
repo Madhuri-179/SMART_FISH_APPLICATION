@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Selected image"
+        android:src="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/select_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:text="Select Image" />
+
+    <Button
+        android:id="@+id/identify_fish_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Identify Fish"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/fish_result_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result will appear here"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center" />
+</LinearLayout>

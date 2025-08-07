@@ -1,0 +1,74 @@
+plugins {
+    id("com.android.application") version "8.11.1"
+    id("org.jetbrains.kotlin.android") version "2.2.0"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.0"
+}
+
+
+android {
+    namespace = 'com.swapna.fishidentificationapp'
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId = "com.swapna.fishidentificationapp"
+        minSdk = 21
+        targetSdk = 36
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled = false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+
+    buildFeatures {
+        compose = true
+    }
+}
+
+dependencies {
+    // Core
+    implementation(libs.androidx.core.ktx.v1131)
+    implementation(libs.androidx.lifecycle.runtime.ktx.v291)
+    implementation(libs.androidx.activity.compose.v1101)
+
+    // Compose
+    implementation(platform(libs.androidx.compose.bom.v20250601))
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(libs.material3)
+
+    // Image loading
+    implementation(libs.coil.compose)
+    implementation(libs.glide)
+
+    // TensorFlow Lite
+    //noinspection Aligned16KB
+    implementation(libs.tensorflow.lite)
+    implementation(libs.tensorflow.lite.support)
+
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit.v121)
+    androidTestImplementation(libs.androidx.espresso.core.v361)
+    androidTestImplementation(platform(libs.androidx.compose.bom.v20240500))
+    androidTestImplementation(libs.ui.test.junit4)
+
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
+}
