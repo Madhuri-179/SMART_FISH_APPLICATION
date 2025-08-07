@@ -83,6 +83,7 @@ These optimizations make the app suitable for deployment in real-world environme
 
 ---
 
+
 ## 📂 Project Structure
 
 - `/app` – Android app source code
